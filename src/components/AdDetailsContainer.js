@@ -5,14 +5,16 @@ import {loadAd, deleteAd} from '../actions/ad'
 
 class AdDetailsContainer extends React.Component {
   state = {
-    title: '',
-    description: '',
-    price: '',
-    address: '',
-    pickup_possible: '',
-    phone_nr: '',
-    picture_url: '',
-    email: '',
+    formValues: {
+      title: '',
+      price: '',
+      description: '',
+      address: '',
+      pickup_possible: '',
+      phone_nr: '',
+      picture_url: '',
+      email: ''
+    }
   }
   
   componentDidMount() {

@@ -6,6 +6,7 @@ export default (props) => {
         <form className={'AdvertisementForm'} onSubmit={onSubmit}>
             <label htmlFor="name">Advertisement Title</label>
             <input 
+                type="text"
                 name="title" 
                 key="title" 
                 value={values.title}
@@ -14,6 +15,7 @@ export default (props) => {
             </input>
             <label htmlFor="content">Product Description</label>
             <textarea 
+                type="text"
                 name="description" 
                 key="description" 
                 value={values.description}
@@ -30,6 +32,7 @@ export default (props) => {
             </input>
             <label htmlFor="content">Address</label>
             <textarea 
+                type="text"
                 name="address" 
                 key="address" 
                 value={values.address}
@@ -45,7 +48,7 @@ export default (props) => {
                 className='AdvertisementForm_pickup_possible_textarea'>
             </input>
             <input 
-                type="phone_nr"
+                type="text"
                 name="phone_nr"
                 key="phone_nr"
                 value={values.phone_nr}
@@ -53,7 +56,7 @@ export default (props) => {
                 className='AdvertisementForm_phone_nr_textarea'>
             </input>
             <input 
-                type="picture_url"
+                type="text"
                 name="picture_url"
                 key="picture_url"
                 value={values.picture_url}

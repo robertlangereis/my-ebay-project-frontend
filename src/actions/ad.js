@@ -92,13 +92,15 @@ export const deleteAd = id => dispatch => {
 }
 
 export const updateAd = (id, data) => dispatch => {
+  console.log("id",id, "data", data)
   request
-    .patch(`${baseUrl}/advertisements/${id}` , console.log('response', id))
-    .send(data.formValues, "send")
-    .then(response => dispatch(adUpdateSuccess(response.body.advertisement)))
-    .catch(console.error, "there was an error")
-    // if(response.ok){ 
-    // }
-    // else{return "there was an error"}
-    // })
-  }
+    .put(`${baseUrl}/advertisements/${id}`)
+    .send(data, "send")
+    .then(response => {
+      if(response.ok){
+        dispatch(adUpdateSuccess(response.body), console.log('response.body',response.body))
+      }
+      else return "there was an error"
+    })
+      .catch(console.error, "there was an error")
+}
