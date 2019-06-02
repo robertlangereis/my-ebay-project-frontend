@@ -1,7 +1,9 @@
-### `LANGEREIS MARKTPLAATS`
+### `JUST ANOTHER MARKTPLAATS`
 This project was intended for hobby and educational purposes only, during my course at Codaisseur (Class 25, May/April/June 2019). 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Use 'npm install' to download all necessary dependencies 
 
 ## Available Scripts
 
