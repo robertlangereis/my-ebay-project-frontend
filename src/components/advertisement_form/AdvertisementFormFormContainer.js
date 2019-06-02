@@ -16,7 +16,6 @@ class AdvertisementFormContainer extends React.Component {
   }
 
   onChange = (ad) => {
-    // console.log('ad.target.name test:', ad.target.name)
     this.setState({
       [ad.target.name]: ad.target.value
     })

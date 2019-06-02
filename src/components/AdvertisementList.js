@@ -7,7 +7,6 @@ export default class AdvertisementList extends Component {
     }
  
   render() {
-    // console.log(this.props.ads)
     const { ads } = this.props
     return(
             <div>

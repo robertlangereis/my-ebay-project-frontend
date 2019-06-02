@@ -3,7 +3,6 @@ import EditAdFormContainer from './EditAdFormContainer';
 import { Link } from 'react-router-dom'
 
 export default (props) => {
-    // console.log(props)
     const { ad, onDelete } = props  
     if (ad){
     return (<div>

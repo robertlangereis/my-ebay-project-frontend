@@ -36,9 +36,7 @@ const adUpdateSuccess = ad => ({
 export const loadAd = (id) => (dispatch, getState) => {
   // when the state already contains ads, we don't fetch them again
   // if (getState().ad) return 
-  // ==> I had to kill this, because it was basically saying: if there is already a state (which is the old ad loaded), then don't load the new state
-  // const adID = getState().ads.id
-  // a GET /ads request
+  // ==> I had to remove the lines above, these were basically stating: "if there is already a state (which is the old ad loaded), then don't load the new state"
   request(`${baseUrl}/advertisements/${id}`)
     .then(response => {
       if(response.ok){
@@ -54,16 +52,12 @@ export const loadAd = (id) => (dispatch, getState) => {
 export const loadAds = () => (dispatch, getState) => {
   // when the state already contains ads, we don't fetch them again
   if (getState().ads) return
-  // const adID = getState().ads.id
-  // a GET /ads request
   request(`${baseUrl}/advertisements`)
     .then(response => {
       if(response.ok){
-        // console.log(id) 
         dispatch(adsFetched(response.body.advertisement))
       }
         else{return "there was an error"}
-      // dispatch an ADS_FETCHED action that contains the ads
     })
     .catch(console.error)
 }
@@ -84,7 +78,7 @@ export const deleteAd = id => dispatch => {
     .delete(`${baseUrl}/advertisements/${id}`)
     .then(response => {
       if(response.ok){
-      dispatch(adDeleteSuccess(id), console.log(id))
+      dispatch(adDeleteSuccess(id))
     }
       else{return "there was an error"}
   })
@@ -92,13 +86,12 @@ export const deleteAd = id => dispatch => {
 }
 
 export const updateAd = (id, data) => dispatch => {
-  console.log("id",id, "data", data)
   request
     .put(`${baseUrl}/advertisements/${id}`)
     .send(data, "send")
     .then(response => {
       if(response.ok){
-        dispatch(adUpdateSuccess(response.body), console.log('response.body',response.body))
+        dispatch(adUpdateSuccess())
       }
       else return "there was an error"
     })

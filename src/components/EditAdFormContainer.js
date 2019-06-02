@@ -4,24 +4,10 @@ import {updateAd} from '../actions/ad'
 import AdvertisementForm from '../components/advertisement_form/AdvertisementForm'
 
 class EditAdFormContainer extends React.Component {
-  state = {
-    // formValues: {
-    //   title: '',
-    //   price: '',
-    //   description: '',
-    //   address: '',
-    //   pickup_possible: '',
-    //   phone_nr: '',
-    //   picture_url: '',
-    //   email: ''
-    // }
-  }
+  state = {  }
 
   onChange = (ad) => {
     // update the formValues property with the new data from the input field
-    // console.log(ad.target.title, "ad.target.title")
-    // console.log(ad.target.name, "ad.target.name")
-    // console.log(this.state, "this state")
     this.setState({
       formValues: {
         ...this.state.formValues,
@@ -59,7 +45,6 @@ class EditAdFormContainer extends React.Component {
       email: ''
     })
     this.props.updateAd(this.props.ad.id, this.state.formValues)
-    console.log("onSubmit send. This.props.ad.id" ,this.props.ad.id, "this.state.value", this.state.formValues)
   }
 
   render() {

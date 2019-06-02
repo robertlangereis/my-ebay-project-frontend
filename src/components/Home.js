@@ -6,7 +6,6 @@ import AdvertisementFormContainer from './advertisement_form/AdvertisementFormFo
 
 class AdvertisementListContainer extends React.Component {
   componentDidMount() {
-    // console.log('AdvertisementListContainer componentDidMount test!')
     this.props.loadAds()
   }
 
@@ -14,10 +13,9 @@ class AdvertisementListContainer extends React.Component {
     if (this.props.ads){
     return<div> 
       <AdvertisementList ads={this.props.ads}/> 
-      {/* {console.log(this.props.ads)} */}
       <h1>Create a New Advertisement</h1>
       <AdvertisementFormContainer/></div>}
-    else return 'Loading ads...'
+    else return 'Loading events...'
 }
     
 }

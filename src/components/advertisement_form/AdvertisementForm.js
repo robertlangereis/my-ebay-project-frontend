@@ -22,6 +22,7 @@ export default (props) => {
                 onChange={onChange}
                 className='AdvertisementForm_descr_textarea'>
             </textarea>
+            <label htmlFor="content">Price</label>
             <input 
                 type="price"
                 key="price"
@@ -39,6 +40,7 @@ export default (props) => {
                 onChange={onChange}
                 className='AdvertisementForm_address_textarea'>
             </textarea>
+            <label htmlFor="content">Pickup Possible</label>
             <input 
                 type="checkbox"
                 name="pickup_possible"
@@ -47,6 +49,7 @@ export default (props) => {
                 onChange={onChange}
                 className='AdvertisementForm_pickup_possible_textarea'>
             </input>
+            <label htmlFor="content">Phone number</label>
             <input 
                 type="text"
                 name="phone_nr"
@@ -55,6 +58,7 @@ export default (props) => {
                 onChange={onChange}
                 className='AdvertisementForm_phone_nr_textarea'>
             </input>
+            <label htmlFor="content">Image URL</label>
             <input 
                 type="text"
                 name="picture_url"
@@ -63,6 +67,7 @@ export default (props) => {
                 onChange={onChange}
                 className='AdvertisementForm_picture_url_textarea'>
             </input>
+            <label htmlFor="content">Email address</label>
             <input 
                 type="email"
                 name="email"
