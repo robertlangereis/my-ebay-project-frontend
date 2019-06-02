@@ -3,7 +3,9 @@ This project was intended for hobby and educational purposes only, during my cou
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Use 'npm install' to download all necessary dependencies 
+## Initial installment
+1. Use 'npm install' to download all necessary dependencies 
+2. Note: in order for this client side webapp to run, you require the corresponding backend, to be found here: https://github.com/robertlangereis/my-ebay-project-backend
 
 ## Available Scripts
 
